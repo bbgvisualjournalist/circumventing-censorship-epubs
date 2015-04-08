@@ -46,7 +46,7 @@
 	<% for (var i=0; i<images_array.length; i++){ %>
 	<item id="image_<%= i %>" href="images/<%= images_array[i] %>" media-type="image/png"/><% } %>
 </manifest>
-<spine toc="ncx">
+<spine toc="ncx" <% if (direction=='rtl'){ %> page-progression-direction="rtl"<% }%>>>
 	<itemref idref="cover"/>
 	<itemref idref="titlepage"/>
 	<itemref idref="toc"/>
