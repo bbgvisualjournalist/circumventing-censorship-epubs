@@ -1,0 +1,110 @@
+[
+  {
+    "language": "english",
+    "overview": "Overview",
+    "dns": "DNS (Domain Name System)",
+    "freegate": "Freegate",
+    "pgp": "PGP (Pretty Good Privacy)",
+    "psiphon": "Psiphon",
+    "tor": "TOR (The Onion Router)",
+    "ultrasurf": "UltraSurf",
+    "vpn": "Virtual Private Network",
+    "rowNumber": 1
+  },
+  {
+    "language": "amharic",
+    "overview": "",
+    "dns": "",
+    "freegate": "",
+    "pgp": "",
+    "psiphon": "",
+    "tor": "",
+    "ultrasurf": "",
+    "vpn": "",
+    "rowNumber": 2
+  },
+  {
+    "language": "chinese",
+    "overview": "概观",
+    "dns": "DNS（域名系统）",
+    "freegate": "自由门",
+    "pgp": "PGP（良好隐私）",
+    "psiphon": "赛风",
+    "tor": "TOR（洋葱路由器）",
+    "ultrasurf": "无界",
+    "vpn": "虚拟专用网",
+    "rowNumber": 3
+  },
+  {
+    "language": "korean",
+    "overview": "개요",
+    "dns": "DNS (도메인 이름 시스템)",
+    "freegate": "Freegate",
+    "pgp": "PGP (아주 좋은 개인 정보 보호)",
+    "psiphon": "Psiphon",
+    "tor": "TOR (양파 라우터)",
+    "ultrasurf": "UltraSurf",
+    "vpn": "가상 사설망",
+    "rowNumber": 4
+  },
+  {
+    "language": "persian",
+    "overview": "بررسی اجمالی",
+    "dns": "DNS (سیستم نام دامنه)",
+    "freegate": "Freegate را",
+    "pgp": "PGP (پیجیپی)",
+    "psiphon": "سایفون",
+    "tor": "TOR (پیاز روتر)",
+    "ultrasurf": "",
+    "vpn": "",
+    "rowNumber": 5
+  },
+  {
+    "language": "russian",
+    "overview": "Обзор",
+    "dns": "DNS (Domain Name System)",
+    "freegate": "Freegate",
+    "pgp": "PGP (Pretty Good Privacy)",
+    "psiphon": "Psiphon",
+    "tor": "TOR (The Onion Router)",
+    "ultrasurf": "UltraSurf",
+    "vpn": "Виртуальная частная сеть",
+    "rowNumber": 6
+  },
+  {
+    "language": "urdu",
+    "overview": "",
+    "dns": "",
+    "freegate": "",
+    "pgp": "",
+    "psiphon": "",
+    "tor": "",
+    "ultrasurf": "",
+    "vpn": "",
+    "rowNumber": 7
+  },
+  {
+    "language": "uzbek",
+    "overview": "",
+    "dns": "",
+    "freegate": "",
+    "pgp": "",
+    "psiphon": "",
+    "tor": "",
+    "ultrasurf": "",
+    "vpn": "",
+    "rowNumber": 8
+  },
+  {
+    "language": "vietnamese",
+    "overview": "Tổng quan",
+    "dns": "DNS (Domain Name System)",
+    "freegate": "Freegate",
+    "pgp": "PGP (Pretty Good Privacy)",
+    "psiphon": "Psiphon",
+    "tor": "TOR (The Onion Router)",
+    "ultrasurf": "UltraSurf",
+    "vpn": "Mạng riêng ảo",
+    "rowNumber": 9
+  }
+]

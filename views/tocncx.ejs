@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="<%= data.abbreviation %>">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="Content-Language" content="<%= data.abbreviation %>"/>
+    <meta name="dtb:uid" content="<%= data.uuid %>"/>
+  </head>
+  <docTitle>
+    <text><%= data.title %></text>
+  </docTitle>
+  <navMap>
+    <navPoint id="preface" playOrder="1">
+      <navLabel>
+        <text><%= data.headline %></text>
+      </navLabel>
+      <content src="introduction.xhtml"/>
+    </navPoint>
+
+    <navPoint id="dns" playOrder="2">
+      <navLabel>
+        <text><%= toc.dns %></text>
+      </navLabel>
+      <content src="dns.xhtml"/>
+    </navPoint>
+    <navPoint id="freegate" playOrder="3">
+      <navLabel>
+        <text><%= toc.freegate %></text>
+      </navLabel>
+      <content src="freegate.xhtml"/>
+    </navPoint>
+    <navPoint id="pgp" playOrder="4">
+      <navLabel>
+        <text><%= toc.pgp %></text>
+      </navLabel>
+      <content src="pgp.xhtml"/>
+    </navPoint>
+    <navPoint id="psiphon" playOrder="5">
+      <navLabel>
+        <text><%= toc.psiphon %></text>
+      </navLabel>
+      <content src="psiphon.xhtml"/>
+    </navPoint>
+    <navPoint id="tor" playOrder="6">
+      <navLabel>
+        <text><%= toc.tor %></text>
+      </navLabel>
+      <content src="tor.xhtml"/>
+    </navPoint>
+    <navPoint id="ultrasurf" playOrder="7">
+      <navLabel>
+        <text><%= toc.ultrasurf %></text>
+      </navLabel>
+      <content src="ultrasurf.xhtml"/>
+    </navPoint>
+    <navPoint id="vpn" playOrder="8">
+      <navLabel>
+        <text><%= toc.vpn %></text>
+      </navLabel>
+      <content src="vpn.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>

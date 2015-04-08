@@ -1,0 +1,92 @@
+[
+  {
+    "language": "english",
+    "abbreviations": "en",
+    "toc": "Table of contents",
+    "introduction": "Introduction",
+    "cover": "Book Cover",
+    "titlepage": "Title page",
+    "overview": "Overview",
+    "rowNumber": 1
+  },
+  {
+    "language": "amharic",
+    "abbreviations": "am",
+    "toc": "",
+    "introduction": "",
+    "cover": "",
+    "titlepage": "",
+    "overview": "",
+    "rowNumber": 2
+  },
+  {
+    "language": "chinese",
+    "abbreviations": "zh-CN",
+    "toc": "目录",
+    "introduction": "介绍",
+    "cover": "书皮",
+    "titlepage": "封面",
+    "overview": "概观",
+    "rowNumber": 3
+  },
+  {
+    "language": "korean",
+    "abbreviations": "ko",
+    "toc": "차례",
+    "introduction": "소개",
+    "cover": "책 표지",
+    "titlepage": "표제지",
+    "overview": "개요",
+    "rowNumber": 4
+  },
+  {
+    "language": "persian",
+    "abbreviations": "fa",
+    "toc": "جدول محتوا",
+    "introduction": "معرفی",
+    "cover": "جلد کتاب",
+    "titlepage": "صفحه عنوان",
+    "overview": "بررسی اجمالی",
+    "rowNumber": 5
+  },
+  {
+    "language": "russian",
+    "abbreviations": "ru",
+    "toc": "Содержание",
+    "introduction": "Введение",
+    "cover": "Обложка Книги",
+    "titlepage": "Титульный лист",
+    "overview": "Обзор",
+    "rowNumber": 6
+  },
+  {
+    "language": "urdu",
+    "abbreviations": "ur",
+    "toc": "فہرست کے ٹیبل",
+    "introduction": "تعارف",
+    "cover": "کتاب کا احاطہ",
+    "titlepage": "سرورق",
+    "overview": "مجموعی جائزہ",
+    "rowNumber": 7
+  },
+  {
+    "language": "uzbek",
+    "abbreviations": "uz",
+    "toc": "",
+    "introduction": "",
+    "cover": "",
+    "titlepage": "",
+    "overview": "",
+    "rowNumber": 8
+  },
+  {
+    "language": "vietnamese",
+    "abbreviations": "vi",
+    "toc": "Mục lục",
+    "introduction": "Sự giới thiệu",
+    "cover": "Book Cover",
+    "titlepage": "Chương sách",
+    "overview": "Tổng quan",
+    "rowNumber": 9
+  }
+]

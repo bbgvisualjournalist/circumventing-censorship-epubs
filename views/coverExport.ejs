@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="<%= data.abbreviation %>" xml:lang="<%= data.abbreviation %>">
+<head>
+	<% include partials/template/head.ejs %>
+	<title><%= data.title %></title>
+	<style type="text/css">
+		#cover img{margin:0; padding:0; width: 600px; height: 800px;}
+		#cover {margin:0 auto; width: 600px; height: 800px; padding:0; background: url(<%=pathPrefix%>images/circumventionCover.png); position: relative;}
+		#title{position: absolute; bottom: 0px; color: #FFF; text-align: center; width: 600px; height: 180px;}
+		#title h1{font-size: 50px;}
+		#title h1 .gray{color:#CCC;}
+		#title h1 .orange{color:#f7941e;}
+		#title h3{font-size: 30px; padding: 0 15px;}
+		#title h5{color:#666; font-size:17px;}
+		#kicker{text-align: center;}
+		#kicker{text-align: center;background-color:#222; color:#69beaf; display: inline-block;margin:0 auto; padding:5px;}
+
+	</style>
+</head>
+
+	<body class='<%= direction %>'>
+		<div id="cover">
+			<div id='kicker'>
+			<h4><%= data.metatitlebar %></h4>
+			</div>
+			<div id='title'>
+				<h1>
+				<% if (data.twocolortitlepart1!=""){ %>
+				<span class='gray'><%= data.twocolortitlepart1 %></span>
+				<span class='orange'><%= data.twocolortitlepart2 %></span>
+				<% }else{ %>
+				<%= data.title %>
+				<% } %>
+				</h1>
+				<h3><%= data.headline %></h3>
+				<br/>
+				<h5><%= data.authorbyline %></h5>
+			</div>
+		</div>
+	</body>
+</html>

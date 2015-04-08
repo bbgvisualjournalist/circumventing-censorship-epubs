@@ -1,0 +1,85 @@
+		<div class='comicBook <%= direction %>' id='vpn'>
+			<div style='text-align:center;'>
+				<h2 id='toolName' class='kicker'><%= toolData.toolname %></h2>
+			</div>
+
+			<div class='panel col3 title block'>
+				<h1 id='headline'><%= toolData.headline %></h1>
+				<h2 id='tagline'><%= toolData.tagline %></h2>
+			</div>
+			<div class='panel col3 block comicIntro'>
+				<div class='subpanel third' style='margin-right:0; padding-right:0;'>
+					<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/intro<%= directionComics %>.png' class='imagePanel' style='margin-right:0; padding-right:0;'/>
+				</div>
+				<div class='subpanel twothirds'>
+					<p id='introduction' class='textPad all balloon' style='padding: 15px; text-align:center; background-color:#FFF;'><%= toolData.introduction %></p>
+				</div>
+			</div>
+			<div class='clearMe'></div>
+
+			<div class='panel col3 block' style='background:url(http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_background_1<%= directionComics %>.png) center no-repeat; height:340px;'>
+				<p id='panel1' class='textPad' style='background-color:#000; color:#FFF;'><%= toolData.panel1 %></p>
+				<div class="insetBox" style="top: 33%; left: -7%; border:none; background:none;">
+					<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_inset_1<%= directionComics %>.png' class='imagePanel removeBorder noFlip'/>
+				</div>
+				<div class="insetBox" style="top: 33%; right: -7%; border:none; background:none;">
+					<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_inset_2<%= directionComics %>.png' class='imagePanel removeBorder noFlip'/>
+				</div>
+				<div class="insetBox" style="bottom: 10px; left: 10px; width: 90%; border:none; background-color:transparent; color:#000;">
+					<p id='panel1_inset' class=""><%= toolData.panel1inset %></p>
+				</div>
+			</div>
+
+			<div class='panel col3 block' style='background:url(http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_background_2<%= directionComics %>.png) center no-repeat; height:340px;'>
+				<p id='panel2' class='textPad' style='background-color:#000; color:#FFF;'><%= toolData.panel2 %> </p>
+				<div class="insetBox" style="top: 33%; left: -7%; border:none; background:none;">
+					<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_inset_1<%= directionComics %>.png' class='imagePanel removeBorder noFlip'/>
+				</div>
+				<div class="insetBox" style="top: 33%; right: -7%; border:none; background:none;">
+					<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_inset_2<%= directionComics %>.png' class='imagePanel removeBorder noFlip'/>
+				</div>
+				<div class="insetBox" style="bottom: 10px; left: 10px; width: 90%; border:none; background-color:transparent; color:#000;">
+					<p id='panel2_inset' class=""><%= toolData.panel2inset %></p>
+				</div>
+			</div>			
+
+
+
+			<div class='panel col3 block'>
+				<p id='panel3' class='textPad blackBox' style='' ><%= toolData.panel3 %></p>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_3<%= directionComics %>.png' class='imagePanel'/>
+			</div>
+
+			<div class='panel col3 block'>
+				<p id='panel4' class='textPad blackBox' style='' ><%= toolData.panel4 %></p>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_4<%= directionComics %>.png' class='imagePanel noFlip'/>
+				<div class="insetBox" style="bottom: 10px; 
+				<% if (direction=='rtl'){ %> right: 10px; left: 10px; <% } %>
+				 width: 50%; border:none; background-color:transparent; color:#000;">
+					<p id='panel4_inset' class=""><%= toolData.panel4inset %></p>
+				</div>
+			</div>
+
+
+
+			<div class='panel col1 hideMobile'>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_5_left<%= directionComics %>.png' class='imagePanel'/>
+			</div>
+
+			<div class='panel col4'>
+				<p id='panel5' class='textPad' style='background-color:#ada7d3; color:#000;' ><%= toolData.panel5 %></p>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_background_5<%= directionComics %>.png' class='imagePanel'/>
+				<div class="insetBox showMobile" style="top: 35%; left: -10%; border:none; background:none;">
+					<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_5_inset1<%= directionComics %>.png' class='imagePanel removeBorder'/>
+				</div>
+				<div class="insetBox showMobile" style="top: 35%; right: -10%; border:none; background:none;">
+					<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_5_inset2<%= directionComics %>.png' class='imagePanel removeBorder'/>
+				</div>
+				<p id='panel5_inset' class="textPad blackBox"><%= toolData.panel5inset %></p>
+			</div>
+
+			<div class='panel col1 hideMobile'>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_vpn_5_right<%= directionComics %>.png' class='imagePanel'/>
+			</div>
+
+		</div>

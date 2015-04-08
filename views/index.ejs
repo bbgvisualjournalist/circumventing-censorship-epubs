@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<head>
+	<% include partials/template/head.ejs %>
+	<title><%= title %></title>
+	<style type="text/css">
+		body{padding:20px 5%;}
+		p{font-family: Arial, sans-serif;}
+		#container{max-width: 800px; margin: 0 auto;}
+		#container img {width: 100%; max-width: 800px;}
+		#container h1, #container h2{text-align: left; line-height: .7em;}
+		#container h2{color:#999; margin-bottom:1em;}
+		.book{margin-bottom:30px;}
+		.clearAll{clear:both;}
+	</style>
+</head>
+<body>
+<div id='container'>
+	<h1><%= data[0].title %> ebooks</h1>
+	<h2><%= data[0].headline %></h2>
+	<p>The metadata, titles, chapters and comic strip translations are being generated from this <a href='https://docs.google.com/spreadsheets/d/123DWrahipU6XOVjnVdTd0kdOBFBlzXuxButFymJ-OmA/pubhtml' target='_blank'>google spreadsheet</a>.</p>
+	<br/>
+
+	<img src="../images/circumvention.jpg"/>
+	<br/>
+	<br/>
+	<% for (var i=0; i<languages.length; i++){ %>
+		<% if (data[i].ready =="TRUE"){ %>
+			<div class='book'>
+				<h4><%= i + 1 %>. <%= data[i].title %> (<%= languages[i] %>)</h4>
+				<p><%= data[i].metadescription %> </p>
+				<div class='clearAll'></div>
+				<ul id='<%= languages[i] %>'>
+					<li><a href='/<%= languages[i] %>/content.opf'>content.opf</a></li>
+					<li><a href='/<%= languages[i] %>/cover.xhtml'>cover.xhtml</a></li>
+					<li><a href='/<%= languages[i] %>/toc.xhtml'>toc.xhtml</a></li>
+					<li><a href='/<%= languages[i] %>/titlepage.xhtml'>titlepage.xhtml</a></li>
+					<li><a href='/<%= languages[i] %>/introduction.xhtml'>introduction.xhtml</a></li>
+
+					<li><a href='/<%= languages[i] %>/dns'>dns.xhtml</a></li>
+					<li><a href='/<%= languages[i] %>/freegate'>freegate.xhtml</a></li>
+					<li><a href='/<%= languages[i] %>/pgp'>pgp.xhtml</a></li>
+					<li><a href='/<%= languages[i] %>/psiphon'>psiphon.xhtml</a></li>
+					<li><a href='/<%= languages[i] %>/tor'>tor.xhtml</a></li>
+					<li><a href='/<%= languages[i] %>/ultrasurf'>ultrasurf.xhtml</a></li>
+					<li><a href='/<%= languages[i] %>/vpn'>vpn.xhtml</a></li>
+				</ul>
+				<br/>
+				<h4>Comics</h4>
+				<p> <a href='/comics/<%= languages[i] %>/dns'>DNS</a>, 
+					<a href='/comics/<%= languages[i] %>/freegate'>Freegate</a>, 
+					<a href='/comics/<%= languages[i] %>/pgp'>PGP</a>, 
+					<a href='/comics/<%= languages[i] %>/psiphon'>Psiphon</a>, 
+					<a href='/comics/<%= languages[i] %>/tor'>TOR</a>, 
+					<a href='/comics/<%= languages[i] %>/ultrasurf'>UltraSurf</a>, 
+					<a href='/comics/<%= languages[i] %>/vpn'>VPN</a>
+				</p>
+			</div>
+		<% } %>
+	<% } %>
+</div>
+</body>
+</html>

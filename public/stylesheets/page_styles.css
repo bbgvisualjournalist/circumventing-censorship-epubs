@@ -1,0 +1,31 @@
+/*Set charset*/
+@charset "utf-8";
+
+/*Declare latest references*/
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace epub "http://www.idpf.org/2007/ops";
+
+/*Set universal page margins*/
+@page {
+	margin: 30px;
+}
+
+/*Import all relevant fonts*/
+@font-face {
+	font-family: "Oswald";
+	font-weight: normal;
+	src: url(../fonts/Oswald-Regular.otf)
+}
+
+@font-face {
+	font-family: "Amatic SC";
+	font-weight: normal;
+	src: url(../fonts/AmaticSC-Regular.otf)
+}
+
+@font-face {
+	font-family: "Roboto Slab";
+	font-weight: normal;
+	src: url(../fonts/RobotoSlab-Bold.otf)
+}
+

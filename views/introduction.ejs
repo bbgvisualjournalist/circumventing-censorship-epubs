@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="<%= data.abbreviation %>" xml:lang="<%= data.abbreviation %>">
+<head>
+	<title><%= data.title %></title>
+	<% include partials/template/head.ejs %>
+
+		<style type="text/css">
+			h1{font-family: 'Oswald', 'Roboto Slab', Arial; font-size: 2.7em; text-align: center; line-height:1.2em;font-weight: 400;}
+			h3{font-family: 'Amatic SC', Arial, sans-serif; font-size: 1.7em; text-align: center;}
+			h3.subhed{font-family: 'Oswald', 'Roboto Slab', Arial, sans-serif; text-align: left;}
+
+			.rtl h3.subhed{text-align: right;}
+		</style>
+
+</head>
+<body class='<%= direction %>'>
+	<div epub:type="bodymatter" id="bodymatter">
+		<section epub:type="preface">
+			<h1><%= data.headline %></h1>
+			<h3><%= data.tagline %></h3>
+
+			<br/>
+
+			<div class="img_fs_cap">
+				<div><img src="<%= pathPrefixImage %>images/circumvention.png" alt="" /></div>
+				<p class="caption"></p>
+			</div>
+
+			<%- include(partial) %>
+
+			<br/>
+
+			<div class='toolsTable'>
+				<table id='tools'>
+					<tr>
+						<th class='toolName'><%= data.comparingtitle %></th>
+						<th class='metric' id='anonymity' title='Anonymity'><span><%= data.comparisonanonymity %></span></th>
+						<th class='metric' id='circumvention' title='Circumvention'><span><%= data.comparisoncircumvention %></span></th>
+						<th class='metric' id='portability' title='Portability'><span><%= data.comparisonportability %></span></th>
+						<th class='metric' id='encryption' title='Encryption'><span><%= data.comparisonencryption %></span></th>
+					</tr>
+					<tr class="toolRow">
+						<td><a href='dns<%= pathSuffix %>'><%= toc.dns %></a></td>
+						<td class='metric'></td>
+						<td class='metric true'></td>
+						<td class='metric true'></td>
+						<td class='metric'></td>
+					</tr>
+					<tr class="toolRow">
+						<td><a href='freegate<%= pathSuffix %>'><%= toc.freegate %></a></td>
+						<td class='metric true'></td>
+						<td class='metric'></td>
+						<td class='metric'></td>
+						<td class='metric true'></td>
+					</tr>
+					<tr class="toolRow">
+						<td><a href='pgp<%= pathSuffix %>'><%= toc.pgp %></a></td>
+						<td class='metric'></td>
+						<td class='metric'></td>
+						<td class='metric'></td>
+						<td class='metric true'></td>
+					</tr>
+					<tr class="toolRow">
+						<td><a href='psiphon<%= pathSuffix %>'><%= toc.psiphon %></a></td>
+						<td class='metric true'></td>
+						<td class='metric true'></td>
+						<td class='metric true'></td>
+						<td class='metric true'></td>
+					</tr>
+					<tr class="toolRow">
+						<td><a href='tor<%= pathSuffix %>'><%= toc.tor %></a></td>
+						<td class='metric true'></td>
+						<td class='metric true'></td>
+						<td class='metric'></td>
+						<td class='metric true'></td>
+					</tr>
+					<tr class="toolRow">
+						<td><a href='ultrasurf<%= pathSuffix %>'><%= toc.ultrasurf %></a></td>
+						<td class='metric true'></td>
+						<td class='metric true'></td>
+						<td class='metric true'></td>
+						<td class='metric true'></td>
+					</tr>
+					<tr class="toolRow">
+						<td><a href='vpn<%= pathSuffix %>'><%= toc.vpn %></a></td>
+						<td class='metric true'></td>
+						<td class='metric true'></td>
+						<td class='metric true'></td>
+						<td class='metric true'></td>
+					</tr>
+				</table>
+			</div>
+
+		</section>
+	</div>
+</body>
+</html>

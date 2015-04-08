@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="<%= data.abbreviation %>" xml:lang="<%= data.abbreviation %>">
+<head>
+	<% include partials/template/head.ejs %>
+	<title><%= toolData.toolname %> | <%= toolData.headline %></title>
+	<% if (mode != 'export'){ %>
+		<link href="<%=pathPrefix%>stylesheets/comicbook_v2.css" rel="stylesheet" type="text/css" />
+
+		<style type="text/css">
+			
+			/* font-stack: main */
+			body { 
+				font-family: <%- global.fonts[language].main %>;
+			}
+
+			/* font-stack: altA */
+			div.panel p, .comicBook h4, .comicBook .story p a, .comicBook ul.listView li, .cutline, .byline, .story p.credit, .label, #menu ul li, #menu ul li a, #footer .note, .actionButton a, table#tools {
+				font-family:  <%- global.fonts[language].altA %>;
+			}
+
+			/* font-stack: altB */
+			h1, .comicBook h2, .comicBook h3, .firstcharacter, table#tools tr th.toolName {
+				font-family:  <%- global.fonts[language].altB %>;
+			}
+			h3.subhed{font-family: <%- global.fonts[language].altB %>; text-align: left;}
+
+			/* font-stack: altC */
+			div.panel.title h2, .comicBook .story h3.tagline {
+				font-family:  <%- global.fonts[language].altC %>;
+			}
+
+			/* font-stack: mono */
+			div.panel p.computer { 
+				font-family:  <%- global.fonts[language].mono %>;
+			}
+
+			h1{font-size: 2.7em; text-align: center; line-height:1.2em;font-weight: 400;}
+			h3{font-size: 1.7em; text-align: center;}
+
+		</style>
+
+	<% } %>
+</head>
+<body dir='<%= direction %>' class='<%= direction %>'>
+	<div epub:type="bodymatter" id="bodymatter">
+		<% if (mode == 'export'){ %>
+			<img src='<%= pathPrefixImage %>images/<%= tool %>.png'/>
+		<% } else { %>
+			<%- include(partialComic) %>
+		<% } %>
+		<%- include(partial) %>
+	</div>
+</body>
+</html>

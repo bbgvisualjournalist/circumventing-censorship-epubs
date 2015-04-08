@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="<%= data.abbreviation %>" xml:lang="<%= data.abbreviation %>">
+<head>
+	<% include partials/template/head.ejs %>
+	<title><%= data.title %></title>
+</head>
+<body>
+	<h2><%= dictionary.toc %></h2>
+	<nav epub:type="toc" id="toc">
+		<ol>			
+			<li class="toc-1">
+				<a href="introduction.xhtml"><%= dictionary.introduction %> | <%= data.headline %></a>
+			</li>
+			<% for (var i=3; i<sections.length; i++){ %>
+			<li class="toc-1"><a href="<%= sections[i] %>.xhtml"><%= global[sections[i]][language].headline %></a></li><% } %>
+
+		</ol>
+	</nav>
+
+	<nav epub:type="landmarks" hidden="hidden">
+		<h2><%= dictionary.toc %></h2>
+		<ol>
+			<li>
+				<a epub:type="cover" href="cover.xhtml"><%= dictionary.cover %></a>
+			</li>
+			<li>
+				<a epub:type="toc" href="#toc"><%= dictionary.toc %></a>
+			</li>
+			<li>
+				<a epub:type="frontmatter" href="titlepage.xhtml"><%= dictionary.titlepage %></a>
+			</li>
+			<li>
+				<a epub:type="introduction" href="introduction.xhtml"><%= dictionary.overview %></a>
+			</li>
+			<% for (var i=3; i<sections.length; i++){ %>
+			<li><a epub:type="bodymatter" href="<%= sections[i] %>.xhtml"><%= toc[sections[i]] %></a></li><% } %>
+		</ol>
+	</nav>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="3.0">
+<metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<dc:creator id="author"><%= data.author %></dc:creator>
+	<dc:publisher><%= data.metasitename %></dc:publisher>
+	<dc:date><%= pubDate %></dc:date>
+	<dc:description id="description"><%= data.metadescription %> </dc:description>
+	<dc:language><%= data.abbreviation %></dc:language>
+	<dc:identifier id="uuid_id" ><%= data.uuid %> </dc:identifier>
+	<dc:identifier id="pub-identifier" >urn:isbn:<%= data.isbn %></dc:identifier>
+	<dc:title id="bookTitle"><%= data.title %></dc:title>
+
+	<% if (language !="english"){ %>
+	<meta refines="#author" property="alternate-script" xml:lang="en"><%= dataEnglish.author %></meta>
+	<meta refines="#description" property="alternate-script" xml:lang="en"><%= dataEnglish.metadescription %> </meta>
+	<meta refines="#bookTitle" property="alternate-script" xml:lang="en"><%= dataEnglish.title %></meta>
+	<% } %>
+
+	<% for (var i=0; i<keywords.length; i++){ %>
+	<dc:subject><%= keywords[i] %></dc:subject><% } %>
+
+	<meta name="cover" content="cover"/>
+	<meta property="dcterms:modified"><%= date %></meta>
+</metadata>
+<manifest>
+	<item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>
+	<item id="toc" href="toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+	<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+	<item id="titlepage" href="titlepage.xhtml" media-type="application/xhtml+xml"/>
+	
+	<item id="intro" href="introduction.xhtml" media-type="application/xhtml+xml"/>
+
+	<% for (var i=3; i<sections.length; i++){ %>
+	<item id="<%= sections[i] %>" href="<%= sections[i] %>.xhtml" media-type="application/xhtml+xml"/><% } %>
+
+	<item id="page_css" href="stylesheets/page_styles.css" media-type="text/css"/>
+	<item id="css" href="stylesheets/stylesheet.css" media-type="text/css"/>
+
+	<item id="font1" href="fonts/AmaticSC-Regular.otf" media-type="application/vnd.ms-opentype"/>
+	<item id="font2" href="fonts/Oswald-Regular.otf" media-type="application/vnd.ms-opentype"/>
+	<item id="font3" href="fonts/RobotoSlab-Bold.otf" media-type="application/vnd.ms-opentype"/>
+	<% for (var i=3; i<sections.length; i++){ %>
+	<item id="comic_<%= sections[i] %>" href="images/<%= sections[i] %>.png" media-type="image/png"/><% } %>
+
+	<item id="image_cover" href="images/cover.png" media-type="image/png" properties="cover-image"/>
+	<% for (var i=0; i<images_array.length; i++){ %>
+	<item id="image_<%= i %>" href="images/<%= images_array[i] %>" media-type="image/png"/><% } %>
+</manifest>
+<spine toc="ncx">
+	<itemref idref="cover"/>
+	<itemref idref="titlepage"/>
+	<itemref idref="toc"/>
+	<itemref idref="intro"/>
+	<% for (var i=3; i<sections.length; i++){ %>
+	<itemref idref="<%= sections[i] %>"/><% } %>
+</spine>
+</package>

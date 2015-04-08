@@ -1,0 +1,80 @@
+		<div class='comicBook <%= direction %>' id='psiphon'>
+			<div style='text-align:center;'>
+				<h2 id='toolName' class='kicker'><%= toolData.toolname %></h2>
+			</div>
+			<div class='panel col3 title block'>
+				<h1 id='headline'><%= toolData.headline %></h1>
+				<h2 id='tagline'><%= toolData.tagline %></h2>
+			</div>
+			<div class='panel col3 block comicIntro'>
+				<div class='subpanel third' style='margin-right:0; padding-right:0;'>
+					<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/intro_5<%= directionComics %>.png' class='imagePanel' style='margin-right:0; padding-right:0;'/>
+				</div>
+				<div class='subpanel twothirds'>
+					<p id='introduction' class='textPad all balloon' style='padding: 15px; text-align:center; background-color:#FFF;'><%= toolData.introduction %></p>
+				</div>
+			</div>
+			<div class='clearMe'></div>
+
+
+
+			<div class='panel col3'>
+				<p id='panel1' class='textPad top' style='' ><%= toolData.panel1 %></p>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_psiphon_2<%= directionComics %>.png' class='imagePanel'/>
+				<div class="insetBox" style="bottom: 5px; width: 50%; <% if (direction!='rtl'){ %> right: 5px; <% } else { %> left: 5px; <% } %>   border:none; background-color:transparent; color: #000;">
+					<p id='panel1_inset' class="" style='color:#FFF;'><%= toolData.panel1inset %></p>
+				</div>
+
+			</div>
+			<div class='panel col3'>
+				<p id='panel2' class='textPad top' style='' ><%= toolData.panel2 %></p>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_psiphon_1<%= directionComics %>.png' class='imagePanel'/>
+				<p id='panel2_inset' class="textPad" style='background-color:#a69fcf;'><%= toolData.panel2inset %></p>
+			</div>
+
+
+
+			<div class='panel col2'>
+				<div class="insetBox blackBox" style="top: 0%; left: 0%; border:none;">
+					<p id='panel3_inset' class="" style=''><%= toolData.panel3inset %></p>
+				</div>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_psiphon_3<%= directionComics %>.png' class='imagePanel'/>
+				<p id='panel3' class='textPad blackBox' style='padding-top:10px' ><%= toolData.panel3 %></p>
+			</div>
+			<div class='panel col2'>
+				<p id='panel4' class='textPad top' style='' ><%= toolData.panel4 %></p>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_psiphon_4<%= directionComics %>.png' class='imagePanel'/>
+				<div class="insetBox " style="bottom: 5px; left: 5%; right:5%; border:none; background-color:transparent; color: #000;">
+					<p id='panel4_inset' class="" style=''><%= toolData.panel4inset %></p>
+				</div>
+			</div>
+			<div class='panel col2'>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_psiphon_5<%= directionComics %>.png' class='imagePanel'/>
+				<p id='panel5' class='textPad blackBox' style='' ><%= toolData.panel5 %></p>
+			</div>
+
+
+
+			<div class='panel col2'>
+				<div class="insetBox blackBox" style="top: 0%; left: 0%; border:none;">
+					<p id='panel6_inset' class="" style=''><%= toolData.panel6inset %></p>
+				</div>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_psiphon_6<%= directionComics %>.png' class='imagePanel'/>
+				<p id='panel6' class='textPad bottom' style='' ><%= toolData.panel6 %></p>
+			</div>
+			<div class='panel col2'>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_psiphon_7<%= directionComics %>.png' class='imagePanel'/>
+				<p id='panel7' class='textPad bottom' style='' ><%= toolData.panel7 %></p>
+			</div>
+			<div class='panel col2'>
+				<img src='http://www.voanews.com/MediaAssets2/projects/circumvention/img/comic_psiphon_8<%= directionComics %>.png' class='imagePanel'/>
+				<p id='panel8' class='textPad bottom' style='' ><%= toolData.panel8 %></p>
+				<div class="insetBox" style="top: 3%; 
+				right: 15%; left: 15%; 
+				width: 85%; border:none; padding:0;background-color:transparent">
+					<p id='panel8_inset' class="computer" style='color:#FFF; padding:0; font-weight:normal;'><%= toolData.panel8inset %> </p>
+				</div>
+
+			</div>
+
+		</div>

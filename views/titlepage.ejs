@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="<%= data.abbreviation %>" xml:lang="<%= data.abbreviation %>">
+<head>
+	<% include partials/template/head.ejs %>
+	<title><%= data.title %></title>
+	<style type="text/css">
+	h1{margin-top: 25%;}
+	</style>
+</head>
+<body>
+
+<div epub:type="frontmatter" id="frontmatter">
+	<section epub:type="titlepage" id="titlepage">
+		<h1 epub:type="title"><%= data.title %></h1>
+		<h2 epub:type="subtitle"><%= data.headline %></h2>
+	</section>
+</div>
+
+</body>
+</html>

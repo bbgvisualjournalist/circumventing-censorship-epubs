@@ -1,0 +1,47 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	
+	<title>Circumventing Censorship | VOA Special Report</title>
+
+	<link href="<%=pathPrefix%>stylesheets/page_styles.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="<%=pathPrefix%>stylesheets/comicbook_v2.css" />
+
+	<style type="text/css">
+
+		/* font-stack: main */
+		body { 
+			font-family: <%- global.fonts[language].main %>;
+		}
+
+		/* font-stack: altA */
+		div.panel p, .comicBook h4, .comicBook .story p a, .comicBook ul.listView li, .cutline, .byline, .story p.credit, .label, #menu ul li, #menu ul li a, #footer .note, .actionButton a, table#tools {
+			font-family:  <%- global.fonts[language].altA %>;
+		}
+
+		/* font-stack: altB */
+		h1, .comicBook h2, .comicBook h2.kicker, .comicBook h3, .firstcharacter, table#tools tr th.toolName {
+			font-family:  <%- global.fonts[language].altB %>;
+			font-weight: 400;
+		}
+
+		/* font-stack: altC */
+		.comicBook div.panel.title h2, .comicBook .story h3.tagline {
+			font-family:  <%- global.fonts[language].altC %>;
+		}
+
+		/* font-stack: mono */
+		div.panel p.computer { 
+			font-family:  <%- global.fonts[language].mono %>;
+		}
+
+	</style>
+</head>
+
+<body class='<%= direction %>'>
+			<%- include(partial) %>
+</body>
+</html>
