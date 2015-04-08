@@ -55,8 +55,8 @@
     "pgp": "PGP (پیجیپی)",
     "psiphon": "سایفون",
     "tor": "TOR (پیاز روتر)",
-    "ultrasurf": "",
-    "vpn": "",
+    "ultrasurf": "اولتراسرف",
+    "vpn": "وی.پی.ان. VPN – شبکه مجازی خصوصی",
     "rowNumber": 5
   },
   {
@@ -68,7 +68,7 @@
     "psiphon": "Psiphon",
     "tor": "TOR (The Onion Router)",
     "ultrasurf": "UltraSurf",
-    "vpn": "Виртуальная частная сеть",
+    "vpn": "VPN",
     "rowNumber": 6
   },
   {

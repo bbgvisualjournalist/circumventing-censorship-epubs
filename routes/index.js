@@ -37,6 +37,11 @@ router.get('/:language/content.opf', function(req, res, next) {
 	var toc = global.toc[language];
 	var images_array = global.images_array;
 
+	var direction = '';
+	if (overview.direction=='rtl'){
+		direction = 'rtl';
+	}
+
 	keywords = keywords.split(", ");
 	console.log(keywords);
 
@@ -53,6 +58,7 @@ router.get('/:language/content.opf', function(req, res, next) {
 		dataEnglish: overviewEnglish,
 		keywords: keywords,
 		images_array: images_array,
+		direction: direction,
 		toc: toc,
 		date: d,
 		pubDate: originalPubDateFormatted
@@ -74,9 +80,15 @@ router.get('/:language/cover.xhtml', function(req, res, next) {
 		pathMode = ''
 	}
 
+	var direction = '';
+	if (overview.direction=='rtl'){
+		direction = 'rtl';
+	}
+
 	res.render('cover', { 
 		language: language,
 		data: overview,
+		direction: direction,
 		pathPrefix: pathMode
 	});
 });
@@ -85,6 +97,7 @@ router.get('/:language/cover.xhtml', function(req, res, next) {
 router.get('/:language/coverExport.xhtml', function(req, res, next) {
 	var language = req.params.language;
 	var overview = global.overview[language];
+
 
 	//edit this for exporting to epub so that paths match up
 	//specifically for head.js with the CSS
@@ -116,6 +129,11 @@ router.get('/:language/titlepage.xhtml', function(req, res, next) {
 	var language = req.params.language;
 	var overview = global.overview[language];
 
+	var direction = '';
+	if (overview.direction=='rtl'){
+		direction = 'rtl';
+	}
+
 	//edit this for exporting to epub so that paths match up
 	//specifically for head.js with the CSS
 	var mode = req.query.mode;
@@ -127,6 +145,7 @@ router.get('/:language/titlepage.xhtml', function(req, res, next) {
 	res.render('titlepage', { 
 		language: language,
 		data: overview,
+		direction: direction,
 		pathPrefix: pathMode
 	});
 });
@@ -141,6 +160,11 @@ router.get('/:language/toc.xhtml', function(req, res, next) {
 	var toc = global.toc[language];
 	var dictionary = global.dictionary[language];
 
+	var direction = '';
+	if (overview.direction=='rtl'){
+		direction = 'rtl';
+	}
+
 	//edit this for exporting to epub so that paths match up
 	//specifically for head.js with the CSS
 	var mode = req.query.mode;
@@ -153,6 +177,7 @@ router.get('/:language/toc.xhtml', function(req, res, next) {
 		language: language,
 		data: overview,
 		toc: toc,
+		direction: direction,
 		dictionary: dictionary,
 		pathPrefix: pathMode
 	});
@@ -165,6 +190,11 @@ router.get('/:language/toc.ncx', function(req, res, next) {
 	var overview = global.overview[language];
 	var toc = global.toc[language];
 	var dictionary = global.dictionary[language];
+
+	var direction = '';
+	if (overview.direction=='rtl'){
+		direction = 'rtl';
+	}
 
 	//edit this for exporting to epub so that paths match up
 	//specifically for head.js with the CSS
@@ -179,6 +209,7 @@ router.get('/:language/toc.ncx', function(req, res, next) {
 		language: language,
 		data: overview,
 		toc: toc,
+		direction: direction,
 		dictionary: dictionary,
 		pathPrefix: pathMode,
 	});
