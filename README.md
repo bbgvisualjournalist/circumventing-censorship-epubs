@@ -1,7 +1,5 @@
 # circumventing-censorship
-Simplify the editing and translation of Voice of America's ["Circumventing Censorship" project](http://projects.voanews.com/circumvention/).
-
-VOA created a website promoting online tools to help people circumvent government attempts to restrict access to the internet. We want to republish that content as epubs that can be downloaded and shared. We also needed a way to simplify the addition and editing of meta data and translations. 
+VOA created [a website](http://projects.voanews.com/circumvention/) promoting online tools to help people circumvent government online censorship efforts. We want to republish that content as ebooks that can be downloaded and shared. We also needed a way to simplify the addition and editing of meta data and translations. 
 
 We're using the ePub3 format, which is basically a series of XHTML documents that are zipped together using a very specific structure. The idea of manually trying copy and paste the text into the appropriate tags throughout the book seemed tedious and destined for errors.
 
