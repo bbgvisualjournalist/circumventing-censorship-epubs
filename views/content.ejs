@@ -4,7 +4,7 @@
 	<dc:creator id="author"><%= data.author %></dc:creator>
 	<dc:publisher><%= data.metasitename %></dc:publisher>
 	<dc:date><%= pubDate %></dc:date>
-	<dc:description id="description"><%= data.metadescription %> </dc:description>
+	<dc:description id="description"><%= data.metadescription %></dc:description>
 	<dc:language><%= data.abbreviation %></dc:language>
 	<dc:identifier id="uuid_id" ><%= data.uuid %> </dc:identifier>
 	<dc:identifier id="pub-identifier" >urn:isbn:<%= data.isbn %></dc:identifier>
@@ -46,7 +46,7 @@
 	<% for (var i=0; i<images_array.length; i++){ %>
 	<item id="image_<%= i %>" href="images/<%= images_array[i] %>" media-type="image/png"/><% } %>
 </manifest>
-<spine toc="ncx" <% if (direction=='rtl'){ %> page-progression-direction="rtl"<% }%>>>
+<spine toc="ncx" <% if (direction=='rtl'){ %> page-progression-direction="rtl"<% }%>>
 	<itemref idref="cover"/>
 	<itemref idref="titlepage"/>
 	<itemref idref="toc"/>
