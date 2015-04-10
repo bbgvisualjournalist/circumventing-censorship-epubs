@@ -42,8 +42,19 @@ router.get('/:language/content.opf', function(req, res, next) {
 		direction = 'rtl';
 	}
 
+	//If no translation is provided for the meta description, use the english
+	if (overview.metadescription ==""){
+		overview.metadescription = overviewEnglish.metadescription;
+	}
+
+	//If no translations are provided for keywords, use the english keywords
+	if (keywords ==""){
+		keywords = overviewEnglish.metakeywords
+	}
+
 	keywords = keywords.split(", ");
 	console.log(keywords);
+
 
 	var d = new Date().toISOString();
 	d = d.replace(/\..*Z/, 'Z');//Removes decimal values that throw errors.
